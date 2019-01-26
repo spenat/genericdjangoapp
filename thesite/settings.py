@@ -78,13 +78,14 @@ from . import database
 
 DATABASES = {
     'default': database.config()
-    """
-    {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'polls_database', # os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-    """
 }
+
+"""
+{
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'polls_database', # os.path.join(BASE_DIR, 'db.sqlite3'),
+}
+"""
 
 
 # Password validation
