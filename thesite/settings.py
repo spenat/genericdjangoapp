@@ -74,11 +74,16 @@ WSGI_APPLICATION = 'thesite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+from . import database
+
 DATABASES = {
-    'default': {
+    'default': database.config()
+    """
+    {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'polls_database', # os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    """
 }
 
 
