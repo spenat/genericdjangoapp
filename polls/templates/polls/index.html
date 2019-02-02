@@ -34,7 +34,6 @@ ul {
     list-style-position: inside;
     list-style-type: circle;
     background-color: rgba(100,200,100,.30);
-    width: 50%;
     padding: 20px;
     border-radius: 10px;
 }
@@ -42,34 +41,41 @@ li {
     background-color: rgba(120,220,120,.40);
     padding: 10px 30px;
     margin: 25px;
+    border: 1px solid black;
     vertical-align: center;
     border-radius: 10px;
 }
 li:hover {
-    background-color: rgba(150,150,150,.40);
+    background-color: rgba(150,220,150,.40);
     padding: 10px 30px;
+    border-top: 0px solid black;
+    border-left: 0px solid black;
+    margin-bottom: 26px;
     border-radius: 10px;
 }
 p {
     background-color: rgba(100,100,100,.50);
-    width: 50%;
     padding: 20px;
     border-radius: 10px;
 }
 p:hover {
     background-color: rgba(100,100,255,.50)
 }
+
+
 </style>
 
 <body >
 <font face="dejavu sans">
-<h1>This is not a turtle</h1>
+<center><h1>This is not a turtle</h1>
+</center>
 {% if thumbs %}
     <ul>
     {% for thumb in thumbs %}
-        <li><a href="{{ thumb.image_src }}">{{ thumb.title }}<br/> 
-            <img src="{{ thumb.image_src }}" alt="{{ thumb.title}}" width=200px height=200px/>
-            </a></li>
+        <li><a href="{{ thumb.image_src }}">{{ thumb.title }}<br/>
+            <center><img src="{{ thumb.image_src }}" alt="{{ thumb.title}}"  height="200px" /></center>
+            </a>
+        </li>
     {% endfor %}
     </ul>
 {% else %}
